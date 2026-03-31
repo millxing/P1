@@ -646,6 +646,19 @@ blockquote,
   margin-top: 4rem;
 }
 
+.warrant-page__document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0 0 1rem;
+}
+
+.warrant-page__mobile-note {
+  display: none;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
 .warrant-page__document-title {
   margin: 0 0 1.5rem;
   font-size: clamp(1.55rem, 2.2vw, 2.1rem);
@@ -889,6 +902,14 @@ blockquote,
 }
 
 @media (max-width: 640px) {
+  .warrant-page__mobile-note {
+    display: block;
+  }
+
+  .warrant-page__embed {
+    display: none;
+  }
+
   .hero--home {
     padding: 2.2rem 1rem 1.9rem;
   }
