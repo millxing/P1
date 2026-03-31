@@ -288,6 +288,10 @@ blockquote,
   color: var(--muted);
 }
 
+.tmms-description {
+  margin-top: 1.6rem;
+}
+
 .prose-content {
   max-width: 56rem;
 }
