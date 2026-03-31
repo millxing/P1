@@ -45,31 +45,53 @@
     </header>
 
     <main>
-      <section class="hero hero--home">
-        <div class="hero-copy hero-copy--home">
-          <h1>Brookline's Precinct 1</h1>
-          <p class="hero-intro">
-            Welcome to the Brookline Precinct 1 website, created by Precinct 1 Town
-            Meeting representatives to keep you connected to what's happening in our
-            precinct and across the Town of Brookline.
-          </p>
-        </div>
-      </section>
+      <section class="page-section page-section--tight-top page-section--no-divider home-page" id="site-sections">
+        <div class="home-welcome-panel">
+          <div class="hero hero--home">
+            <div class="hero-copy hero-copy--home">
+              <h1>Brookline's Precinct 1</h1>
+              <p class="hero-intro">
+                Welcome to the Brookline Precinct 1 website, created by Precinct 1 Town
+                Meeting representatives to keep you connected to what's happening in our
+                precinct and across the Town of Brookline.
+              </p>
+            </div>
+          </div>
 
-      <section class="page-section page-section--tight-top page-section--no-divider" id="site-sections">
-        <div class="home-link-grid" aria-label="Homepage site links">
-          <a class="home-link-button" href="tmms.html">P1 Town Meeting Members</a>
-          <a class="home-link-button" href="election-information.html">P1 Voting Location</a>
-          <a class="home-link-button" href="may-2026-election.html">May 5 Election</a>
-          <a class="home-link-button" href="warrant-may-2026.html">Annual Town Meeting Warrant</a>
-          <a class="home-link-button" href="about.html">About Precinct 1</a>
-          <a class="home-link-button" href="events.html">Precinct 1 Events and News</a>
-          <a class="home-link-button home-link-button--wide" href="links.html">Links and Resources</a>
+          <div class="home-link-grid" aria-label="Homepage site links">
+            <a class="home-link-button" href="tmms.html">P1 Town Meeting Members</a>
+            <a class="home-link-button" href="election-information.html">P1 Voting Location</a>
+            <a class="home-link-button" href="may-2026-election.html">May 5 Election</a>
+            <a class="home-link-button" href="warrant-may-2026.html">Annual Town Meeting Warrant</a>
+            <a class="home-link-button" href="about.html">About Precinct 1</a>
+            <a class="home-link-button" href="events.html">Precinct 1 Events and News</a>
+            <a class="home-link-button home-link-button--featured" href="links.html">Links and Resources</a>
+          </div>
         </div>
 
-        <figure class="home-map">
-          <img src="assets/P1Map.png" alt="Map of Brookline Precinct 1." />
-        </figure>
+        <div class="home-visual-grid" aria-label="Welcome page visuals">
+          <figure class="home-visual home-visual--photo">
+            <button class="home-visual__trigger" type="button" data-lightbox-trigger>
+              <img
+                src="assets/halls2.jpg"
+                alt="Hall's Pond in Precinct 1, with trees reflected in still water."
+              />
+            </button>
+          </figure>
+          <figure class="home-visual home-visual--map">
+            <button class="home-visual__trigger" type="button" data-lightbox-trigger>
+              <img src="assets/P1Map.png" alt="Map of Brookline Precinct 1." />
+            </button>
+          </figure>
+        </div>
+
+        <dialog class="image-lightbox" data-image-lightbox aria-label="Expanded image view">
+          <button class="image-lightbox__close" type="button" data-lightbox-close aria-label="Close expanded image">
+            Close
+          </button>
+          <img class="image-lightbox__image" data-lightbox-image alt="" />
+          <p class="image-lightbox__caption" data-lightbox-caption></p>
+        </dialog>
       </section>
     </main>
   </body>
