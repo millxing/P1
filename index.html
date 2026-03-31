@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Brookline's Precinct 1</title>
+    <meta
+      name="description"
+      content="A non-partisan information site for Brookline, Massachusetts Precinct 1."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html">
+          <span class="site-brand__name">Brookline Precinct 1</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Primary">
+          <a data-nav-link href="tmms.html">TMMs P1</a>
+          <a data-nav-link href="election-information.html">Voting Location</a>
+          <a data-nav-link href="may-2026-election.html">May 5 Election</a>
+          <a data-nav-link href="warrant-may-2026.html">ATM 2026 Warrant</a>
+          <a data-nav-link href="about.html">About Precinct 1</a>
+          <a data-nav-link href="events.html">P1 Events</a>
+          <a data-nav-link href="links.html">Links</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero--home">
+        <div class="hero-copy hero-copy--home">
+          <h1>Brookline's Precinct 1</h1>
+          <p class="hero-intro">
+            Welcome to Brookline's Precinct 1 website, created by Precinct 1 Town
+            Meeting representatives to keep you connected to what's happening in our
+            precinct and across the Town of Brookline.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section page-section--tight-top page-section--no-divider" id="site-sections">
+        <div class="home-link-grid" aria-label="Homepage site links">
+          <a class="home-link-button" href="tmms.html">P1 Town Meeting Members</a>
+          <a class="home-link-button" href="election-information.html">P1 Voting Location</a>
+          <a class="home-link-button" href="may-2026-election.html">May 5 Election</a>
+          <a class="home-link-button" href="warrant-may-2026.html">Annual Town Meeting Warrant</a>
+          <a class="home-link-button" href="about.html">About Precinct 1</a>
+          <a class="home-link-button" href="events.html">Precinct 1 Events and News</a>
+          <a class="home-link-button home-link-button--wide" href="links.html">Links and Resources</a>
+        </div>
+
+        <figure class="home-map">
+          <img src="assets/P1Map.png" alt="Map of Brookline Precinct 1." />
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

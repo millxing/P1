@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Precinct 1 Voting Location | Brookline Precinct 1</title>
+    <meta
+      name="description"
+      content="Voting and election information for Brookline Precinct 1."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-brand" href="index.html">
+          <span class="site-brand__name">Brookline Precinct 1</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Primary">
+          <a data-nav-link href="tmms.html">TMMs P1</a>
+          <a data-nav-link href="election-information.html">Voting Location</a>
+          <a data-nav-link href="may-2026-election.html">May 5 Election</a>
+          <a data-nav-link href="warrant-may-2026.html">ATM 2026 Warrant</a>
+          <a data-nav-link href="about.html">About Precinct 1</a>
+          <a data-nav-link href="events.html">P1 Events</a>
+          <a data-nav-link href="links.html">Links</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--compact">
+        <div class="page-hero__copy">
+          <h1>Precinct 1 Voting Location</h1>
+        </div>
+      </section>
+
+      <section class="page-section election-page">
+        <div class="election-page__content">
+          <p class="election-page__location">
+            Precinct 1's voting location is at Boston University / Wheelock
+            College, 43 Hawes Street (Monmouth St entrance)
+          </p>
+          <div class="election-page__photo-grid">
+            <figure class="election-page__photo">
+              <img
+                src="assets/43Hawes_MonmouthEntrance.png"
+                alt="Entrance to the voting location at 43 Hawes Street on Monmouth Street."
+              />
+            </figure>
+            <div class="election-page__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10805.109341849777!2d-71.11199498696968!3d42.34375093600959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379ed649036eb%3A0xe26d6ed14a8fbedd!2s43%20Hawes%20St%2C%20Brookline%2C%20MA%2002446!5e1!3m2!1sen!2sus!4v1774910407053!5m2!1sen!2sus"
+                title="Map of 43 Hawes Street, Brookline, Massachusetts"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <p class="election-page__where-link election-page__where-link--lookup">
+            <a href="https://www.sec.state.ma.us/WhereDoIVoteMA">Where Do I Vote? (Enter your address)</a>
+          </p>
+          <h2 class="election-page__example-heading">Example Output</h2>
+          <figure class="election-page__example">
+            <img
+              src="assets/P1 election info.png"
+              alt="Example output showing Precinct 1 election information lookup results."
+            />
+          </figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
