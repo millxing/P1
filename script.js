@@ -57,6 +57,75 @@ if (lightbox && lightboxImage && lightboxCaption) {
   });
 }
 
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+  const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+  const previousButton = carousel.querySelector("[data-carousel-prev]");
+  const nextButton = carousel.querySelector("[data-carousel-next]");
+  const status = carousel.querySelector("[data-carousel-status]");
+
+  if (!slides.length) {
+    return;
+  }
+
+  let currentIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+  if (currentIndex < 0) {
+    currentIndex = 0;
+  }
+
+  const renderSlide = () => {
+    slides.forEach((slide, index) => {
+      const isActive = index === currentIndex;
+      slide.hidden = !isActive;
+      slide.classList.toggle("is-active", isActive);
+    });
+
+    dots.forEach((dot, index) => {
+      const isActive = index === currentIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+
+    if (status) {
+      status.textContent = `${currentIndex + 1} of ${slides.length}`;
+    }
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = (index + slides.length) % slides.length;
+    renderSlide();
+  };
+
+  previousButton?.addEventListener("click", () => {
+    goToSlide(currentIndex - 1);
+  });
+
+  nextButton?.addEventListener("click", () => {
+    goToSlide(currentIndex + 1);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
+  });
+
+  carousel.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goToSlide(currentIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goToSlide(currentIndex + 1);
+    }
+  });
+
+  renderSlide();
+});
+
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
 document.querySelectorAll('a[href]').forEach((link) => {
