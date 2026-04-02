@@ -542,6 +542,10 @@ blockquote,
   max-width: 66rem;
 }
 
+.events-page__listing {
+  font-size: 1.2em;
+}
+
 .about-page__content {
   max-width: 78rem;
 }
